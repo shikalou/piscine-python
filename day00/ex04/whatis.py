@@ -2,7 +2,7 @@ import sys
 
 def checknumber(object: str) -> bool:
     try:
-        float(object)
+        int(object)
         return (True)
     except:
         return (False)

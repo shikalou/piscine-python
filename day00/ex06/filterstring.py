@@ -13,9 +13,6 @@ def main():
     """
     The script selects elements from a list based on the output of a function.
 
-    The function is applied to each element of the list and if it returns True,
-    the element is selected by the ft_filter() function.
-
     Needs two arguments : a str with no invisible or punctuation char
     and an integer
     usage -> python3 filterstring.py "words with space between" "6"
@@ -29,8 +26,8 @@ def main():
         S = sys.argv[1]
         N = int(sys.argv[2])
         filtered = ft_filter(string_filter, S.split())
-        lambdaded = ft_filter(lambda x: len(x) > N, S.split())
         print(filtered)
+        lambdaded = ft_filter(lambda x: len(x) > N, S.split())
         print(lambdaded)
     except AssertionError as msg:
         print("AssertionError:", msg)

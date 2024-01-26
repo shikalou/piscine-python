@@ -1,5 +1,4 @@
 import sys
-import re
 
 NESTED_MORSE = {'A': '.-', 'B': '-...',
                 'C': '-.-.', 'D': '-..', 'E': '.',
@@ -26,16 +25,9 @@ def main():
     e = "the arguments are bad"
     try:
         assert len(sys.argv) == 2, e
-        assert len(re.findall(r"[^\w\s]", sys.argv[1])) == 0, e
-        ret = ""
+        assert all(c in NESTED_MORSE for c in sys.argv[1].upper()), e
         s = sys.argv[1].upper()
-        for c in range(0, len(s)):
-            if s[c] in NESTED_MORSE:
-                ret += NESTED_MORSE[s[c]]
-                if (c < len(s) - 1):
-                    ret += ' '
-        print(ret)
-
+        print(" ".join([NESTED_MORSE[c] for c in s if c in NESTED_MORSE]))
     except AssertionError as msg:
         print("AssertionError:", msg)
 

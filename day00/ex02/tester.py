@@ -1,21 +1,9 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    tester.py                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/22 18:31:40 by ldinaut           #+#    #+#              #
-#    Updated: 2024/01/22 18:32:14 by ldinaut          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 from find_ft_type import all_thing_is_obj
 
 ft_list = ["Hello", "tata!"]
 ft_tuple = ("Hello", "toto!")
 ft_set = {"Hello", "tutu!"}
-ft_dict = {"Hello" : "titi!"}
+ft_dict = {"Hello": "titi!"}
 
 all_thing_is_obj(ft_list)
 all_thing_is_obj(ft_tuple)
