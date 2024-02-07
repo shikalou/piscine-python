@@ -6,19 +6,21 @@ from load_image import ft_load
 
 
 def ft_rotate(img: np.ndarray) -> np.ndarray:
-    # ret = np.transpose(img)
-    a = np.array([[1, 2, 3], [4, 5, 6]])
-    width, height = a.shape[1], a.shape[0]
-    print(width, height, np.shape(a))
+    """
+    rotate the 2d array like the transpose function
+    """
+    width, height = img.shape[1], img.shape[0]
     ret = []
-    new_row=[]
-    for column in range(0, height):
-        for row in range(0, width):
-            new_row.append(a[row][column])
+    new_row = []
+    i = 0
+    while i < width:
+        for row in img:
+            new_row.append(row[i])
+        i+=1
         ret.append(new_row)
         new_row = []
-    print(ret)
-    print("New shape after Transpose:", np.shape(a))
+    print("New shape after Transpose:", np.shape(ret))
+    ret = np.reshape(ret, (400, 400))
     return(ret)
 
 def main():
@@ -30,9 +32,9 @@ def main():
         sys.exit(1)
     print(img)
     rot_img = ft_rotate(img)
-    # print(rot_img)
-    # plt.imshow(rot_img, cmap='gray')
-    # plt.show()
+    print(rot_img)
+    plt.imshow(rot_img, cmap='gray')
+    plt.show()
 
 
 if __name__ == "__main__":
