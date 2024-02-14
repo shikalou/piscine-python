@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 
 def display_graph(file: pd.DataFrame, country: str):
-    """function which format dataframe received as parameter and
+    """display_graph(file: pd.DataFrame, country: str)
+    function which format dataframe received as parameter and
     display plot graph of chosen country info"""
     try:
         assert country != "", "needs existing country name in english"

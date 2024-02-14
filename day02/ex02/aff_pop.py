@@ -10,7 +10,8 @@ def millions_formatter(x, pos):
 
 
 def display_graph(file: pd.DataFrame, cou: list):
-    """function to reformat dataframe values and display plot graph"""
+    """display_graph(file: pd.DataFrame, cou: list)
+    function to reformat dataframe values and display plot graph"""
     try:
         assert len(cou) == 2, "needs two country name in english"
         cou.sort()
