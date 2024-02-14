@@ -3,7 +3,6 @@ import numpy as np
 import cv2 as cv
 
 
-
 def ft_reshape(img: np.ndarray, dim: tuple) -> any:
     """
     reshape and return img
@@ -36,7 +35,7 @@ def ft_load(path: str) -> any:
         return (gray)
     except AssertionError as msg:
         print("AssertionError:", msg)
-        return(None)
+        return (None)
     except Exception as msg:
         print(msg)
         return (None)

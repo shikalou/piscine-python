@@ -1,6 +1,4 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import cv2 as cv
 
 
 def ft_invert(array) -> any:
@@ -38,10 +36,11 @@ def ft_blue(array) -> any:
 def ft_grey(array) -> any:
     """Apply grey filter to the image received."""
     gray = array.copy()
-    r, g, b = array[:,:,0], array[:,:,1], array[:,:,2]
+    r, g, b = array[:, :, 0], array[:, :, 1], array[:, :, 2]
     # gray = 0.3 * r + 0.59 * g + 0.11 * b
     # gray = sum([r / 0.3 / 25, g / 0.59 / 25, b / 0.11 / 25])
-    gray = r / 0.299 / 25 / (0.587/ 25 / g) / (0.114/ 25 / b )
+    gray = sum([r / (1/0.3), g / (1/0.59), b / (1/0.11)])
+    # gray = r / 0.299 / 1 / (0.587 / 1 / g) / (0.114 / 1 / b)
+    # gray = (r / 0.299 / 11) / (1 / (g / 0.587 / 2.9)) / (1 / (b / 0.114 / 77))
     plt.imshow(gray, cmap="gray")
     plt.show()
-

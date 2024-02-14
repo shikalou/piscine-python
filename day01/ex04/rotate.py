@@ -1,7 +1,6 @@
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
-import cv2 as cv
 from load_image import ft_load
 
 
@@ -9,19 +8,20 @@ def ft_rotate(img: np.ndarray) -> np.ndarray:
     """
     rotate the 2d array like the transpose function
     """
-    width, height = img.shape[1], img.shape[0]
+    width = img.shape[1]
     ret = []
     new_row = []
     i = 0
     while i < width:
         for row in img:
             new_row.append(row[i])
-        i+=1
+        i += 1
         ret.append(new_row)
         new_row = []
     print("New shape after Transpose:", np.shape(ret))
     ret = np.reshape(ret, (400, 400))
-    return(ret)
+    return (ret)
+
 
 def main():
     """

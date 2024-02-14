@@ -16,4 +16,8 @@ def slice_me(family: list, start: int, end: int) -> list:
         print(f"my new shap is : {np.shape(family)}")
         return (family)
     except AssertionError as msg:
+        print("AssertionError:", msg)
+        exit(1)
+    except Exception as msg:
         print(msg)
+        exit(1)

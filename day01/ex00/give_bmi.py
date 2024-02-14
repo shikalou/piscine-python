@@ -13,6 +13,10 @@ def give_bmi(h: list[int | float], w: list[int | float]) \
         return (ret)
     except AssertionError as msg:
         print("AssertionError:", msg)
+        exit(0)
+    except Exception as msg:
+        print(msg)
+        exit(0)
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
@@ -28,3 +32,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         return (ret)
     except AssertionError as msg:
         print(msg)
+        exit(0)
+    except Exception as msg:
+        print(msg)
+        exit(0)
