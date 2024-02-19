@@ -17,7 +17,8 @@ def main():
     print(Cersei.is_alive)
     print("---")
     Jaime = Lannister.create_lannister("Jaime", True)
-    print(f"Name : {Jaime.first_name, type(Jaime).__name__}, Alive : {Jaime.is_alive}")
+    print(f"Name : {Jaime.first_name, type(Jaime).__name__},\
+        Alive : {Jaime.is_alive}")
 
 
 if __name__ == "__main__":

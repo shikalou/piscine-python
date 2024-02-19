@@ -10,6 +10,7 @@ class Character(ABC):
         self.is_alive = is_alive
 
     def die():
+        """change object Character is_alive from True to False"""
         pass
 
 
