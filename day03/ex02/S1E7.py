@@ -7,18 +7,18 @@ class Baratheon(Character):
         """Baratheon class construtor"""
         super().__init__(first_name, is_alive)
         self.family_name = "Baratheon"
-        self.eyes = "brown"
-        self.hairs = "dark"
+        self._eyes = "brown"
+        self._hairs = "dark"
 
     def __str__(self) -> str:
         """The __str__() method returns a human-readable, or informal,
         string representation of an object."""
-        return (f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})")
+        return (f"Vector: ({self.family_name}, {self._eyes}, {self._hairs})")
 
     def __repr__(self) -> str:
         """The __repr__() method returns a more information-rich,
         or official, string representation of an object."""
-        return (f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})")
+        return (f"Vector: ({self.family_name}, {self._eyes}, {self._hairs})")
 
     def die(self):
         """function to change is_alive state to False"""
@@ -30,18 +30,18 @@ class Lannister(Character):
     def __init__(self, first_name: str, is_alive: bool = True):
         super().__init__(first_name, is_alive)
         self.family_name = "Lannister"
-        self.eyes = "blue"
-        self.hairs = "light"
+        self._eyes = "blue"
+        self._hairs = "light"
 
     def __str__(self) -> str:
         """The __str__() method returns a human-readable, or informal,
         string representation of an object."""
-        return (f"{self.family_name}, {self.eyes}, {self.hairs}")
+        return (f"{self.family_name}, {self._eyes}, {self._hairs}")
 
     def __repr__(self) -> str:
         """The __repr__() method returns a more information-rich,
         or official, string representation of an object."""
-        return (f"{self.family_name}, {self.eyes}, {self.hairs}")
+        return (f"{self.family_name}, {self._eyes}, {self._hairs}")
 
     def die(self):
         """function to change is_alive state to False"""
