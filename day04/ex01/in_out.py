@@ -13,6 +13,8 @@ def outer(x: int | float, function) -> object:
 
     def inner() -> float:
         nonlocal x
+        nonlocal count
         x = function(x)
-        return (x)
+        count = x
+        return (count)
     return (inner)
