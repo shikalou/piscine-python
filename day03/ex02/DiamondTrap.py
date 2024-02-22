@@ -20,6 +20,7 @@ class King(Baratheon, Lannister):
         """function to change is_alive state to False"""
         self.is_alive = False
 
+# with properties:
     @property
     def eyes(self) -> str:
         """getter for eyes attributs"""
@@ -40,6 +41,7 @@ class King(Baratheon, Lannister):
         """setter for hairs attributs"""
         self._hairs = color
 
+# without properties
     # def get_eyes(self) -> str:
     #     """getter for eyes attributs"""
     #     return (self._eyes)

@@ -9,7 +9,7 @@ def callLimit(limit: int):
                 print(f"Error: {function} call too many times")
                 return
             else:
-                print(f"{function.__name__}()")
+                function()
                 count += 1
             return (function)
         return (limit_function)

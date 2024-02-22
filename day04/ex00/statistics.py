@@ -56,19 +56,21 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
         if (not all([isinstance(i, (float, int)) for i in args])):
             print("problems with args")
             return
-
-    for key, value in kwargs.items():
-        if value == "mean":
-            print("mean :", mean(args))
-        elif value == "median":
-            print("median :", med(args))
-        elif value == "quartile":
-            print("quartile :", quar(args))
-        elif value == "std":
-            print("std :", std(args))
-        elif value == "var":
-            print("var :", var(args))
-        else:
-            pass
+    try:
+        for key, value in kwargs.items():
+            if value == "mean":
+                print("mean :", mean(args))
+            elif value == "median":
+                print("median :", med(args))
+            elif value == "quartile":
+                print("quartile :", quar(args))
+            elif value == "std":
+                print("std :", std(args))
+            elif value == "var":
+                print("var :", var(args))
+            else:
+                pass
+    except Exception as msg:
+        print(msg)
 
 # https://www.programiz.com/python-programming/args-and-kwargs

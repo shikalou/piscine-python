@@ -1,11 +1,13 @@
 import sys
 
+
 def checknumber(object: str) -> bool:
     try:
         int(object)
         return (True)
-    except:
+    except ValueError:
         return (False)
+
 
 try:
     assert len(sys.argv) != 1, ""

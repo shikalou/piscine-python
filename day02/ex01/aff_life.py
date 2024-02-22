@@ -31,7 +31,7 @@ def main():
     if file is None:
         return (1)
     # print(file)
-    display_graph(file, "Italy")
+    display_graph(file, "France")
 
 
 if __name__ == "__main__":

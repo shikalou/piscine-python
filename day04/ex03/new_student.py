@@ -8,7 +8,7 @@ def generate_id() -> str:
 
 
 def generate_login(first: str, last: str) -> str:
-    return (first[0]+last)
+    return (first[0]+last if len(first) else last)
 
 
 @dataclass
@@ -25,3 +25,4 @@ class Student:
 
 # field(init=false) permet de postpone l'init de la variable vu que j'ai
 # besoin d'acceder a name et surname après leur init
+# http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/

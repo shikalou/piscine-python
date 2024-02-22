@@ -41,6 +41,5 @@ def ft_grey(array) -> any:
     # gray = sum([r / 0.3 / 25, g / 0.59 / 25, b / 0.11 / 25])
     gray = sum([r / (1/0.3), g / (1/0.59), b / (1/0.11)])
     # gray = r / 0.299 / 1 / (0.587 / 1 / g) / (0.114 / 1 / b)
-    # gray = (r / 0.299 / 11) / (1 / (g / 0.587 / 2.9)) / (1 / (b / 0.114 / 77))
     plt.imshow(gray, cmap="gray")
     plt.show()

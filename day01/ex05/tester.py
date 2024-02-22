@@ -18,6 +18,6 @@ def main():
     ft_grey(array)
     print(ft_invert.__doc__)
 
- 
+
 if __name__ == "__main__":
     main()

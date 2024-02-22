@@ -5,13 +5,15 @@ from matplotlib.ticker import FuncFormatter
 
 
 def millions_formatter(x, pos):
-    """Formatter pour convertir les floats en millions (M)."""
+    """function to format float to str (millions (M))."""
     return (f'{int(x/1e6)}M')
 
 
 def display_graph(file: pd.DataFrame, cou: list):
     """display_graph(file: pd.DataFrame, cou: list)
-    function to reformat dataframe values and display plot graph"""
+    function to reformat dataframe values and display plot graph
+    takes a dataframe panda object as first params and a list of 2
+    country in english as second params"""
     try:
         assert len(cou) == 2, "needs two country name in english"
         cou.sort()
